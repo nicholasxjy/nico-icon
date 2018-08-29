@@ -1,5 +1,5 @@
-# react-icons
+# nico cli
 
 ```bash
-react-icons -s example/svgs -o icons
+nico -s example/svgs -o icons
 ```

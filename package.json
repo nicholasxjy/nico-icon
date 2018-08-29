@@ -1,16 +1,21 @@
 {
-  "name": "react-svgo",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nico-icon",
+  "version": "1.0.1",
+  "description": "A cli for reactjs to generate icon component from svg file",
   "main": "index.js",
   "bin": {
-    "react-icons": "./bin/index.js"
+    "nico": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "react",
+    "svg",
+    "icon"
+  ],
+  "author": "nicholasxjy",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",

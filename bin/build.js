@@ -111,11 +111,11 @@ async function handleSvgFile(filename, destPath) {
 module.exports = async function(options) {
   try {
     const { source, dest } = options;
-    console.log(`${chalk.blue(`source: ${source}`)}`);
-    console.log(`${chalk.blue(`dest: ${dest}`)}`);
     if (!source || !dest) {
       throw new Error("no source or dest config");
     }
+    console.log(`${chalk.blue(`source: ${source}`)}`);
+    console.log(`${chalk.blue(`dest: ${dest}`)}`);
     // remove old icons first
     const destPath = path.join(process.cwd(), dest);
     console.log(`${chalk.blue(`clear old in ${destPath}`)}`);
@@ -137,6 +137,7 @@ module.exports = async function(options) {
       console.log(chalk.green("All done!"));
     });
   } catch (err) {
-    console.log(`${chalk.red("something went wrong(" + err.message + ")")}`);
+    console.log(`${chalk.red(err.message)}`);
+    console.log(`${chalk.cyan("use option --help, get some help")}`);
   }
 };
