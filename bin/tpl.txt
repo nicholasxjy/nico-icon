@@ -1,0 +1,13 @@
+/* eslint-disable */
+import React from 'react';
+import Icon from './Icon';
+
+const ${name} = props => (
+  <Icon {...props}>
+    <svg version="1.1" viewBox="${viewBox}" width="${width}" height="${height}">
+      ${data}
+    </svg>
+  </Icon>
+)
+
+export default ${name}
