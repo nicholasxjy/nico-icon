@@ -4,7 +4,7 @@ import React from "react";
 
 export default class Icon extends React.Component {
   render() {
-    const { size, color, ...rest } = this.props;
+    const { size, color, classPrefix } = this.props;
     return (
       <span
         style={{
@@ -12,7 +12,7 @@ export default class Icon extends React.Component {
           height: size + "px",
           color
         }}
-        className="svgicon"
+        className={`svgicon ${classPrefix}`}
       >
         {this.props.children}
       </span>
