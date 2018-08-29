@@ -12,8 +12,7 @@ export default class Icon extends React.Component {
           height: size + "px",
           color
         }}
-        {...rest}
-        className="svg-icon"
+        className="svgicon"
       >
         {this.props.children}
       </span>
