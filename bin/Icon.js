@@ -18,9 +18,9 @@ export default class Icon extends React.Component {
     if (color) {
       defaultStyle.color = color;
     }
-    classPrefix = classPrefix || "";
+    classPrefix = classPrefix ? " " + classPrefix : "";
     return (
-      <span style={defaultStyle} className={`svgicon ${classPrefix}`}>
+      <span style={defaultStyle} className={`svgicon${classPrefix}`}>
         {this.props.children}
       </span>
     );
