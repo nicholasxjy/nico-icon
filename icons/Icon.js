@@ -3,21 +3,24 @@
 import React from "react";
 
 const defaultStyle = {
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "rgba(67, 90, 111, 0.698)",
-  width: "20px",
-  height: "20px",
-  position: "relative"
+  width: "16px",
+  height: "16px",
+  color: "#666666"
 };
 
 export default class Icon extends React.Component {
   render() {
-    const { width, height, color, ...rest } = this.props;
-    const style = { ...defaultStyle, width, height, color };
+    let { size, color, classPrefix } = this.props;
+    if (size) {
+      defaultStyle.width = size + "px";
+      defaultStyle.height = size + "px";
+    }
+    if (color) {
+      defaultStyle.color = color;
+    }
+    classPrefix = classPrefix ? " " + classPrefix : "";
     return (
-      <span style={style} {...rest}>
+      <span style={defaultStyle} className={`svgicon${classPrefix}`}>
         {this.props.children}
       </span>
     );
