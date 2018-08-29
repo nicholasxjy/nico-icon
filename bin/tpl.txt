@@ -4,7 +4,7 @@ import Icon from './Icon';
 
 const ${name} = props => (
   <Icon {...props}>
-    <svg version="1.1" viewBox="${viewBox}" width="${width}" height="${height}">
+    <svg version="1.1" viewBox="${viewBox}" width={this.props.iconWidth + 'px'} height={this.props.iconHeight + 'px'} fill="currentColor">
       ${data}
     </svg>
   </Icon>

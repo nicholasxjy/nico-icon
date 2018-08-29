@@ -1,6 +1,6 @@
 {
   "name": "nico-icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cli for reactjs to generate icon component from svg file",
   "main": "index.js",
   "bin": {
