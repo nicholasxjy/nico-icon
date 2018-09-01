@@ -10,7 +10,7 @@ const defaultStyle = {
 
 export default class Icon extends React.Component {
   render() {
-    let { size, color, classPrefix } = this.props;
+    let { size, color, classPrefix, ...rest } = this.props;
     let style = Object.assign({}, defaultStyle)
     if (size) {
       style.width = size + "px";
@@ -21,7 +21,7 @@ export default class Icon extends React.Component {
     }
     classPrefix = classPrefix ? " " + classPrefix : "";
     return (
-      <span style={style} className={`svgicon${classPrefix}`}>
+      <span style={style} className={`svgicon${classPrefix}`} {...rest}>
         {this.props.children}
       </span>
     );

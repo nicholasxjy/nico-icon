@@ -24,8 +24,7 @@ function checkOrCreateDestDir(dir) {
 }
 
 function clearDestDir(dir) {
-  const filepath = path.join(dir, "*.js");
-  return fsExtra.remove(filepath);
+  return fsExtra.remove(dir);
 }
 
 function getComponentName(filename) {
@@ -119,8 +118,8 @@ module.exports = async function(options) {
     // remove old icons first
     const destPath = path.join(process.cwd(), dest);
     console.log(`${chalk.blue(`clear old in ${destPath}`)}`);
-    await checkOrCreateDestDir(destPath);
     await clearDestDir(destPath);
+    await checkOrCreateDestDir(destPath);
 
     glob(path.join(process.cwd(), source, "**/*.svg"), async (err, files) => {
       if (err) throw err;
